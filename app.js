@@ -30,7 +30,9 @@ app.get("/api/artists", function(req, res) {
 
 app.get("/api/artists/:_id", function(req, res) {
 
-    Artist.getArtistFromID(req.params._id, function (err, artists) {
+    var id = req.params._id;
+
+    Artist.getArtistFromID(id, function (err, artists) {
         if(err){
             res.send("Could not get artist");
         }
@@ -43,6 +45,19 @@ app.post("/api/artists", function(req, res) {
     var artist = req.body;
 
     Artist.addArtist(artist, function (err, artists) {
+        if(err){
+            res.send("Could not add artist");
+        }
+        res.json(artist);
+    });
+});
+
+app.put("/api/artists/:_id", function(req, res) {
+
+    var id = req.params._id;
+    var artist = req.body;
+
+    Artist.updateArtist(id, artist, function (err, artists) {
         if(err){
             res.send("Could not add artist");
         }

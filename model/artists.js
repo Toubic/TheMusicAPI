@@ -30,3 +30,10 @@ module.exports.getArtistFromID = function (id, callback){
 module.exports.addArtist = function (artist, callback){
     Artist.create(artist, callback);
 };
+
+module.exports.updateArtist = function (id, artist, callback){
+    var filtering = {_id: id};
+    var update ={ $set: artist };
+    Artist.findOneAndUpdate(filtering, update, {}, callback);
+};
+
