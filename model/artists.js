@@ -16,7 +16,7 @@ var artistSchema = mongoose.Schema({
         type: String,
         required: true
     }
-});
+}, { versionKey: false });
 
 var Artist = module.exports = mongoose.model('Artist', artistSchema);
 
@@ -26,4 +26,7 @@ module.exports.getArtists = function (callback){
 
 module.exports.getArtistFromID = function (id, callback){
     Artist.findById(id, callback);
+};
+module.exports.addArtist = function (artist, callback){
+    Artist.create(artist, callback);
 };
