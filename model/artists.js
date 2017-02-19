@@ -24,3 +24,6 @@ module.exports.getArtists = function (callback){
     Artist.find(callback);
 };
 
+module.exports.getArtistFromID = function (id, callback){
+    Artist.findById(id, callback);
+};
