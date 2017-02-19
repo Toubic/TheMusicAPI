@@ -30,7 +30,7 @@ router.post("/", function(req, res) {
 
     var artist = req.body;
 
-    Artist.addArtist(artist, function (err, artists) {
+    Artist.addArtist(artist, function (err, artist) {
         if(err){
             res.send("Could not add artist");
         }
@@ -43,7 +43,7 @@ router.put("/:_id", function(req, res) {
     var id = req.params._id;
     var artist = req.body;
 
-    Artist.updateArtist(id, artist, function (err, artists) {
+    Artist.updateArtist(id, artist, function (err, artist) {
         if(err){
             res.send("Could not add artist");
         }
@@ -55,7 +55,7 @@ router.delete("/:_id", function(req, res) {
 
     var id = req.params._id;
 
-    Artist.deleteArtist(id, function (err, artists) {
+    Artist.deleteArtist(id, function (err, artist) {
         if(err){
             res.send("Could not add artist");
         }
