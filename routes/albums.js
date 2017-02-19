@@ -20,7 +20,7 @@ router.get("/:_id", function(req, res) {
 
     Album.getAlbumFromID(id, function (err, album) {
         if(err){
-            res.send("Could not get album");
+            res.send("Could not get the album");
         }
         res.json(album);
     });
@@ -45,7 +45,7 @@ router.put("/:_id", function(req, res) {
 
     Album.updateAlbum(id, album, function (err, album) {
         if(err){
-            res.send("Could not add album");
+            res.send("Could not update the album");
         }
         res.json(album);
     });
@@ -57,7 +57,7 @@ router.delete("/:_id", function(req, res) {
 
     Album.deleteAlbum(id, function (err, album) {
         if(err){
-            res.send("Could not add album");
+            res.send("Could not delete the album");
         }
         res.send("Album deleted");
     });

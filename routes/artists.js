@@ -18,11 +18,11 @@ router.get("/:_id", function(req, res) {
 
     var id = req.params._id;
 
-    Artist.getArtistFromID(id, function (err, artists) {
+    Artist.getArtistFromID(id, function (err, artist) {
         if(err){
-            res.send("Could not get artist");
+            res.send("Could not get the artist");
         }
-        res.json(artists);
+        res.json(artist);
     });
 });
 
@@ -32,7 +32,7 @@ router.post("/", function(req, res) {
 
     Artist.addArtist(artist, function (err, artist) {
         if(err){
-            res.send("Could not add artist");
+            res.send("Could not add the artist");
         }
         res.json(artist);
     });
@@ -45,7 +45,7 @@ router.put("/:_id", function(req, res) {
 
     Artist.updateArtist(id, artist, function (err, artist) {
         if(err){
-            res.send("Could not add artist");
+            res.send("Could not update the artist");
         }
         res.json(artist);
     });
@@ -57,7 +57,7 @@ router.delete("/:_id", function(req, res) {
 
     Artist.deleteArtist(id, function (err, artist) {
         if(err){
-            res.send("Could not add artist");
+            res.send("Could not delete the artist");
         }
         res.send("Artist deleted");
     });
