@@ -64,3 +64,15 @@ app.put("/api/artists/:_id", function(req, res) {
         res.json(artist);
     });
 });
+
+app.delete("/api/artists/:_id", function(req, res) {
+
+    var id = req.params._id;
+
+    Artist.deleteArtist(id, function (err, artists) {
+        if(err){
+            res.send("Could not add artist");
+        }
+        res.send("Artist deleted");
+    });
+});

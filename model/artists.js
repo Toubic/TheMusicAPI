@@ -37,3 +37,8 @@ module.exports.updateArtist = function (id, artist, callback){
     Artist.findOneAndUpdate(filtering, update, {}, callback);
 };
 
+module.exports.deleteArtist = function (id, callback){
+    var query = {_id: id};
+    Artist.remove(query, callback);
+};
+
