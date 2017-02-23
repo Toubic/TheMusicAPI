@@ -35,7 +35,7 @@ app.use('/webhooks', stormpath.apiAuthenticationRequired, routeWebhooks);
 app.on('stormpath.ready', function () {
     app.listen(process.env.PORT || 5000);
 });
-mongoose.connect('mongodb://localhost/musicstreaming');
+mongoose.connect(config.database.credentials);
 var db = mongoose.connection;
 
 app.get("/", stormpath.apiAuthenticationRequired, function(req, res) {
