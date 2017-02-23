@@ -9,6 +9,7 @@ var config = require("./config/config");
 var routeArtists = require("./routes/artists");
 var routeAlbums = require("./routes/albums");
 var routeSongs = require("./routes/songs");
+var routeWebhooks = require("./routes/webhooks");
 
 var app = express();
 
@@ -29,6 +30,7 @@ app.use(bodyParser.json());
 app.use('/api/artists', stormpath.apiAuthenticationRequired, routeArtists);
 app.use('/api/albums', stormpath.apiAuthenticationRequired, routeAlbums);
 app.use('/api/songs', stormpath.apiAuthenticationRequired, routeSongs);
+app.use('/webhooks', stormpath.apiAuthenticationRequired, routeWebhooks);
 
 app.on('stormpath.ready', function () {
     app.listen(process.env.PORT || 5000);
