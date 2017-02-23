@@ -15,6 +15,11 @@ This because securing user data and handling authentication is a difficult proce
 
 4. Explain how your web hook works.
 
+My web hook is a slack web hook where you can supply a Webhook URL with the "path" variable in json.
+You send the Webhook URL as a post request to the route ../webhooks/add.
+Then you can send messages to the general chat of that slack Webhook URL through sending get request
+to ../webhooks/send/(message).
+
 5. Since this is your first own web API there are probably things you would solve in an other way looking back at this assignment. Write your thoughts down.
 
 6. Did you do something extra besides the fundamental requirements? Explain them.
