@@ -39,7 +39,7 @@ Maybe make one big collection instead of three, a collection that contains artis
 3. Motivate and defend your authentication solution? Why did you choose the one you did? Pros/Cons.
 
 Pros:
-I wanted a simple authentication because I don't feel like it is sensitive data that my API handles. So I let a third party handle user data and registration of users (Stormpath). 
+I wanted a simple authentication because I don't feel like it is sensitive data that my API handles. So I let a third-party handle user data and registration of users (Stormpath). 
 This because securing user data and handling authentication yourself is a difficult process which takes a lot of time and effort.
 Cons:
 You have to register users via the Stormpath web page.
