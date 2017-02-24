@@ -49,7 +49,7 @@ try {
 
     app.get("/", stormpath.apiAuthenticationRequired, function (req, res) {
 
-        res.send("For the API use: /api/artists or /api/albums or /api/songs or /api/webhooks/add and /api/webhooks/send/(message)")
+        res.json("For the API use: /api/artists or /api/albums or /api/songs or /api/webhooks/add and /api/webhooks/send/(message)")
     });
 
 }

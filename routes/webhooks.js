@@ -23,7 +23,7 @@ router.get("/send/:message", function(req, res) {
 
     slack.text(message);
 
-    res.send("Message sent to slack web hook: " + message);
+    res.json("Message sent to slack web hook: " + message);
 });
 
 module.exports = router;
