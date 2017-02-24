@@ -4,7 +4,8 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
 var stormpath = require("express-stormpath");
-
+var expressLogging = require("express-logging");
+var logger = require("logops");
 try {
 
     var config = require("./config/config");
@@ -35,6 +36,7 @@ try {
     }));
 
     app.use(bodyParser.json());
+    app.use(expressLogging(logger));
     app.use('/api/artists', stormpath.apiAuthenticationRequired, routeArtists);
     app.use('/api/albums', stormpath.apiAuthenticationRequired, routeAlbums);
     app.use('/api/songs', stormpath.apiAuthenticationRequired, routeSongs);

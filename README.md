@@ -54,6 +54,8 @@ Finally I would probably have let another developer test my API to get another p
 
 6. Did you do something extra besides the fundamental requirements? Explain them.
 
-API documentation in README.
+API documentation in README and a request and response logger.
+
+![logger](http://i.imgur.com/4yau7Cd.png)
 
 
