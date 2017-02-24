@@ -18,7 +18,7 @@
     - GET, PUT & DELETE
 * /api/webhooks/add
     - POST
-* /api/webhooks/send
+* /api/webhooks/send/:message
     - GET
 
 ### Postman collection:
