@@ -1,6 +1,31 @@
+#### UML:
+
 ![UML](http://i.imgur.com/RJaFiVo.png)
 
+#### API:
+
+* /api/artists
+    - GET & POST
+* /api/albums
+    - GET & POST
+* /api/songs
+    - GET & POST
+* /api/artists/:_id
+    - GET, PUT & DELETE
+* /api/albums/:_id
+    - GET, PUT & DELETE
+* /api/songs/:_id
+    - GET, PUT & DELETE
+* /api/webhooks/add
+    - POST
+* /api/webhooks/add
+    - GET
+
+#### Postman collection:
+
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/7dd9dc2ad42cf8e199c7)
+
+#### Questions & answers:
 
 1. How have you implemented the idea of HATEOAS in your API? Motivate your choices and how it support the idea of HATEOAS!
 
@@ -28,5 +53,7 @@ I would have added more auto generated data posting to the API like id, HATEOAS 
 Finally I would probably have let another developer test my API to get another point of view of my API. 
 
 6. Did you do something extra besides the fundamental requirements? Explain them.
+
+API documentation in README.
 
 

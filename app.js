@@ -38,7 +38,7 @@ try {
     app.use('/api/artists', stormpath.apiAuthenticationRequired, routeArtists);
     app.use('/api/albums', stormpath.apiAuthenticationRequired, routeAlbums);
     app.use('/api/songs', stormpath.apiAuthenticationRequired, routeSongs);
-    app.use('/webhooks', stormpath.apiAuthenticationRequired, routeWebhooks);
+    app.use('/api/webhooks', stormpath.apiAuthenticationRequired, routeWebhooks);
 
     app.on('stormpath.ready', function () {
         app.listen(process.env.PORT || 5000);
@@ -49,7 +49,7 @@ try {
 
     app.get("/", stormpath.apiAuthenticationRequired, function (req, res) {
 
-        res.send("For the API use: /api/artists or /api/albums or /api/songs or /webhooks/add and /webhooks/send/(message)")
+        res.send("For the API use: /api/artists or /api/albums or /api/songs or /api/webhooks/add and /api/webhooks/send/(message)")
     });
 
 }
