@@ -30,7 +30,9 @@
 1. How have you implemented the idea of HATEOAS in your API? Motivate your choices and how it support the idea of HATEOAS!
 
 I have made "rel" and "href" fields for the API help because the linking for the API is the most important part to get started with the API.
-I also made a "href" field for every resource in the API because it is vital to keep track of all the resources.
+I also made a "href" field for every resource in the API because it is vital to keep track of all the resources. 
+"HATEOAS stands for Hypertext As The Engine Of Application State. It means that hypertext should be used to find your way through the API. " 
+[What is HATEOAS and why is it important for my REST API?](http://restcookbook.com/Basics/hateoas/)
 
 2. If your solution should implement multiple representations of the resources. How would you do it?
 
@@ -38,10 +40,10 @@ Maybe make one big collection instead of three, a collection that contains artis
 
 3. Motivate and defend your authentication solution? Why did you choose the one you did? Pros/Cons.
 
-Pros:
-I wanted a simple authentication because I don't feel like it is sensitive data that my API handles. So I let a third-party handle user data and registration of users (Stormpath). 
+* Pros:
+I wanted a simple authentication solution because I don't feel like it is sensitive data that my API handles. So I let a third-party handle user data and registration of users (Stormpath). 
 This because securing user data and handling authentication yourself is a difficult process which takes a lot of time and effort.
-Cons:
+* Cons:
 You have to register users via the Stormpath web page.
 
 4. Explain how your web hook works.
