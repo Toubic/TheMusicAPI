@@ -56,7 +56,7 @@ try {
                 { "rel" : "songs", "href" : "/api/songs", "actions" : "GET & POST" },
                 { "rel" : "artist", "href" : "/api/artists/:_id", "actions" : "GET, PUT & DELETE" },
                 { "rel" : "album", "href" : "/api/albums/:_id", "actions" : "GET, PUT & DELETE" },
-                { "rel" : "song", "href" : "/api/albums/:_id", "actions" : "GET, PUT & DELETE" },
+                { "rel" : "song", "href" : "/api/songs/:_id", "actions" : "GET, PUT & DELETE" },
                 { "rel" : "webhooks", "href" : "/api/webhooks/add", "actions" : "POST" },
                 { "rel" : "webhooks", "href" : "/api/webhooks/send/:message", "actions" : "GET" }
             ]
