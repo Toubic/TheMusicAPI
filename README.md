@@ -1,8 +1,8 @@
-#### UML:
+### UML:
 
 ![UML](http://i.imgur.com/RJaFiVo.png)
 
-#### API:
+### API:
 
 * /api/artists
     - GET & POST
@@ -18,14 +18,14 @@
     - GET, PUT & DELETE
 * /api/webhooks/add
     - POST
-* /api/webhooks/add
+* /api/webhooks/send
     - GET
 
-#### Postman collection:
+### Postman collection:
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/7dd9dc2ad42cf8e199c7)
 
-#### Questions & answers:
+### Questions & answers:
 
 1. How have you implemented the idea of HATEOAS in your API? Motivate your choices and how it support the idea of HATEOAS!
 
