@@ -49,14 +49,19 @@ try {
 
     app.get("/", stormpath.apiAuthenticationRequired, function (req, res) {
 
-        res.json({"/api/artists":"GET & POST",
-        "/api/albums":"GET & POST",
-        "/api/songs":"GET & POST",
-        "/api/artists/:_id":"GET, PUT & DELETE",
-        "/api/albums/:_id":"GET, PUT & DELETE",
-        "/api/songs/:_id":"GET, PUT & DELETE",
-        "/api/webhooks/add":"POST",
-        "/api/webhooks/send/:message":"GET"})
+        res.json({
+            "links": [
+                { "rel" : "artists", "href" : "/api/artists", "actions" : "GET & POST" },
+                { "rel" : "albums", "href" : "/api/albums", "actions" : "GET & POST" },
+                { "rel" : "songs", "href" : "/api/songs", "actions" : "GET & POST" },
+                { "rel" : "artist", "href" : "/api/artists/:_id", "actions" : "GET, PUT & DELETE" },
+                { "rel" : "album", "href" : "/api/albums/:_id", "actions" : "GET, PUT & DELETE" },
+                { "rel" : "song", "href" : "/api/albums/:_id", "actions" : "GET, PUT & DELETE" },
+                { "rel" : "webhooks", "href" : "/api/webhooks/add", "actions" : "POST" },
+                { "rel" : "webhooks", "href" : "/api/webhooks/send/:message", "actions" : "GET" }
+            ]
+        });
+
     });
 
 }

@@ -29,7 +29,7 @@
 
 1. How have you implemented the idea of HATEOAS in your API? Motivate your choices and how it support the idea of HATEOAS!
 
-I have made a "href" field for every resource in the API.
+I have made "rel" and "href" fields for the API help as well as a "href" field for every resource in the API.
 
 2. If your solution should implement multiple representations of the resources. How would you do it?
 
