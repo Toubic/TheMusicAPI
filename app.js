@@ -5,9 +5,10 @@ var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
 var expressLogging = require("express-logging");
 var logger = require("logops");
-try {
+var dotenv = require("dotenv");
+dotenv.config();
 
-    var config = require("./config/config");
+try {
     var routeArtists = require("./routes/artists");
     var routeAlbums = require("./routes/albums");
     var routeSongs = require("./routes/songs");
@@ -15,11 +16,9 @@ try {
 
     var app = express();
 
-    if (config.client.apiKey.id === undefined || config.client.apiKey.secret === undefined)
+    if (process.env.CLIENT_APIKEY_ID === undefined || process.env.CLIENT_APIKEY_SECRET === undefined)
         throw new Error("No apiKey info given");
-    else if (config.application.href === undefined)
-        throw new Error("No application href given");
-    else if (config.database.credentials === undefined)
+    else if (process.env.DATABASE_CREDENTIALS === undefined)
         throw new Error("No database credentials given");
 
     app.use(bodyParser.json());
@@ -33,7 +32,7 @@ try {
         console.log('Server started on port 5000');
     });
 
-    mongoose.connect(config.database.credentials);
+    mongoose.connect(process.env.DATABASE_CREDENTIALS);
     var db = mongoose.connection;
 
     app.get("/", function (req, res) {
