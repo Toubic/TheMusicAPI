@@ -1,3 +1,6 @@
+
+[Link to deployed project](https://themusicapi.herokuapp.com/)
+
 ### UML:
 
 ![UML](http://i.imgur.com/RJaFiVo.png)
